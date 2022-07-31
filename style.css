@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    position: fixed;
+    width: 70px;
+    left: 0;
+    top: 0;
+    background-color: rgb(9 0 26);
+    height: 100%;
+    padding: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+nav .container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+nav .container a {
+    color: rgb(230, 230, 230);
+    transition: .3s;
+}
+
+nav .container a:hover,
+nav .container a.active {
+    color: rgb(110 65 255);
+}
+
+nav .container a span {
+    font-size: 23px;
+}
+
+.head {
+    background-color: rgba(216, 216, 216, 0.342);
+    width: 100%;
+    padding-left: 80px;
+}
+
+.head .content {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.title-head {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.icons-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icons-head span {
+    color: rgb(109, 109, 109);
+    display: block;
+    cursor: pointer;
+}
+
+.icons-head img {
+    border-radius: 50%;
+}
+
+.crud {
+    width: 100%;
+    background-color: rgba(216, 216, 216, 0.342);
+    padding: 0 0 30px;
+    padding-left: 80px;
+}
+
+.crud .input-creat {
+    width: 80%;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 35px;
+    border: 1px solid rgb(189, 189, 189);
+    padding: 5px;
+    outline: none;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+input::placeholder {
+    font-weight: 500;
+}
+
+#price,
+#taxes,
+#ads,
+#discount {
+    width: calc(25% - 32px);
+    margin-right: 5px;
+    
+}
+
+#total {
+    padding: 4px 7px;
+    background-color: rgb(255, 8, 103);
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#total::before {
+    content: "Total: ";
+}
+
+#btn-creat {
+    padding: 7px 22px;
+    font-size: 17px;
+    color: white;
+    border: none;
+    background-color: rgb(110 65 255);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container-search {
+    padding-left: 80px;
+    margin: 30px 0 20px;
+}
+
+.content-search {
+    width: 80%;
+    margin: auto;
+}
+
+#search {
+    padding: 10px 0 10px 30px;
+    position: relative;
+}
+
+.btn-search {
+    text-align: center;
+}
+
+.btn-search button {
+    padding: 8px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(110 65 255);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.content-information {
+    padding-left: 80px;
+    
+}
+
+.clear-all {
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(255, 8, 103);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table {
+    width: 80%;
+    margin: auto;
+    border-radius: 4px;
+    border-collapse:collapse;
+}
+
+tr th {
+    background-color: rgb(9 0 26);
+    color: white;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+tr td {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 5px 8px;
+}
+
+
+
+#update {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-color: rgb(0 182 97);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#delete {
+    padding: 5px 8px;
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    border: none;
+    background-color: rgb(255, 8, 103);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+    .head .content  {
+        width: 50%;
+    }
+
+    .crud .input-creat {
+        width: 50%;
+    }
+
+    .content-search {
+        width: 50%;
+    }
+
+    .table {
+        width: 50%;
+    }
+}
+
+@media (max-width:500px) {
+    #price, #taxes, #ads, #discount {
+        width: 100%;
+    }
+
+    #btn-creat {
+        float: right;
+    }
+
+    .btn-search button {
+        margin-top: 10px;
+    }
+}

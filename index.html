@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- file css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- file font google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- file font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="#"><img src="" alt=""></a>
+            <a class="active" href="#"><span class="material-symbols-outlined">home</span></a>
+            <a href="#"><span class="material-symbols-outlined">grid_view</span></a>
+            <a href="#"><span class="material-symbols-outlined">mail</span></a>
+            <a href="#"><span class="material-symbols-outlined">description</span></a>
+            <a href="#"><span class="material-symbols-outlined">groups</span></a>
+            <a href="#"><span class="material-symbols-outlined">report</span></a>
+            <a href="#"><span class="material-symbols-outlined">settings</span></a>
+        </div>
+    </nav>
+
+    <div class="head">
+        <div class="content">
+            <h1 class="title-head">Product</h1>
+            <div class="icons-head">
+                <span class="material-symbols-outlined">apps</span>
+                <img src="images/img.jpg" alt="" width="30">
+            </div>
+        </div>
+    </div>
+
+    <div class="crud">
+        <div class="input-creat">
+            <input type="text" id="title" placeholder="title">
+            <input type="text" id="count" placeholder="count">
+            <input type="text" id="category" placeholder="category">
+            <input onkeyup="getTotal()" type="text" id="price" placeholder="price">
+            <input onkeyup="getTotal()" type="text" id="taxes" placeholder="taxes">
+            <input onkeyup="getTotal()" type="text" id="ads" placeholder="ads">
+            <input onkeyup="getTotal()" type="text" id="discount" placeholder="discount">
+            <span id="total">0</span>
+            <button onclick="creatProduct()" id="btn-creat">Create</button>
+        </div>
+    </div>
+
+    <div class="container-search">
+        <div class="content-search">
+            <div class="input-search">
+                <input onkeyup="searchElement(this.value)" type="text" id="search" placeholder="Search">
+            </div>
+            <div class="btn-search">
+                <button onclick="getModeSearch(this.id)" id="sarch-title">Sarch By Title</button>
+                <button onclick="getModeSearch(this.id)" id="sarch-category">Sarch By category</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-information">
+        <table class="table">
+                <thead>
+                    <tr class="thead">
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>taxes</th>
+                        <th>Ads</th>
+                        <th>Discount</th>
+                        <th>total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    
+                </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
